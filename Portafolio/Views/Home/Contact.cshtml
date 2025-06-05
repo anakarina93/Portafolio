@@ -1,0 +1,93 @@
+﻿@model ContactViewModel;
+
+<section class="u-align-center u-clearfix u-container-align-center u-valign-middle u-section-13" id="sec-5d91">
+    <h2 class="u-align-center u-text u-text-2">Contact Us</h2>
+    <div class="u-social-icons u-social-icons-1">
+        <a class="u-social-url" title="facebook" target="_blank" href="https://facebook.com/name">
+            <span class="u-icon u-social-facebook u-social-icon u-text-black u-icon-1">
+                <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xlink:href="#svg-2000"></use></svg>
+                <svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-2000">
+                    <circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle>
+                    <path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
+c0-6.7,3.1-17,17-17h12.5v13.9H73.5z"></path>
+                </svg>
+            </span>
+        </a>
+        <a class="u-social-url" title="twitter" target="_blank" href="https://twitter.com/name">
+            <span class="u-icon u-social-icon u-social-twitter u-text-black u-icon-2">
+                <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112.2 112.2" style=""><use xlink:href="#svg-0a10"></use></svg>
+                <svg class="u-svg-content" viewBox="0 0 112.2 112.2" x="0px" y="0px" id="svg-0a10">
+                    <circle fill="currentColor" cx="56" cy="56" r="55"></circle>
+                    <path fill="#FFFFFF" d="M63.9,51l22.4-24h-8.6L60.3,45.9L46.9,27H24l23.3,32.8L24,85h8.2L51,64.9L65.3,85H88L63.9,51z M55.3,60.2
+l-3.7-5.1L35.7,33.1h8.1l12.3,17.2l3.7,5.1l16.6,23.4h-7.8L55.3,60.2z"></path>
+                </svg>
+            </span>
+        </a>
+        <a class="u-social-url" title="instagram" target="_blank" href="https://instagram.com/name">
+            <span class="u-icon u-social-icon u-social-instagram u-text-black u-icon-3">
+                <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xlink:href="#svg-8dce"></use></svg>
+                <svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-8dce">
+                    <circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle>
+                    <path fill="#FFFFFF" d="M55.9,38.2c-9.9,0-17.9,8-17.9,17.9C38,66,46,74,55.9,74c9.9,0,17.9-8,17.9-17.9C73.8,46.2,65.8,38.2,55.9,38.2
+z M55.9,66.4c-5.7,0-10.3-4.6-10.3-10.3c-0.1-5.7,4.6-10.3,10.3-10.3c5.7,0,10.3,4.6,10.3,10.3C66.2,61.8,61.6,66.4,55.9,66.4z"></path>
+                    <path fill="#FFFFFF" d="M74.3,33.5c-2.3,0-4.2,1.9-4.2,4.2s1.9,4.2,4.2,4.2s4.2-1.9,4.2-4.2S76.6,33.5,74.3,33.5z"></path>
+                    <path fill="#FFFFFF" d="M73.1,21.3H38.6c-9.7,0-17.5,7.9-17.5,17.5v34.5c0,9.7,7.9,17.6,17.5,17.6h34.5c9.7,0,17.5-7.9,17.5-17.5V38.8
+C90.6,29.1,82.7,21.3,73.1,21.3z M83,73.3c0,5.5-4.5,9.9-9.9,9.9H38.6c-5.5,0-9.9-4.5-9.9-9.9V38.8c0-5.5,4.5-9.9,9.9-9.9h34.5
+c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path>
+                </svg>
+            </span>
+        </a>
+    </div>
+    <div class="u-expanded-width u-form u-form-1">
+        <form asp-action="Contact" asp-controller="Home" method="post" class="u-clearfix u-form-spacing-20 u-form-vertical u-inner-form" style="padding: 10px" source="email" name="form">
+            <div class="u-form-group u-form-name u-label-none">
+                <label asp-for="Name" class="u-label">Name</label>
+                <input type="text" placeholder="Enter your Name" id="name" name="name" class="u-border-none u-grey-5 u-input u-input-rectangle" required="">
+                <span asp-validation-for="Name" class="text-danger"></span>
+
+            </div>
+            <div class="u-form-email u-form-group u-label-none">
+                <label asp-for="Email" class="u-label">Email</label>
+                <input asp-for="Email" type="email" placeholder="Enter a valid email address" id="email" name="email" class="u-border-none u-grey-5 u-input u-input-rectangle" required="">
+                <span asp-validation-for="Email" class="text-danger"></span>
+
+            </div>
+            <div class="u-form-group u-form-message u-label-none">
+                <label asp-for="Message" class="u-label">Message</label>
+                <textarea asp-for="Message" placeholder="Enter your message" rows="4" cols="50" id="message" name="message" class="u-border-none u-grey-5 u-input u-input-rectangle" required=""></textarea>
+                <span asp-validation-for="Message" class="text-danger"></span>
+
+            </div>
+            <div class="u-align-left u-form-group u-form-submit">
+                <button type="submit" class="u-black u-btn u-button-style u-btn-1">Submit</button>
+
+                @* <button type="submit">Submit</button> *@
+            </div>
+           @*  <div class="u-form-send-message u-form-send-success">Gracias! Tu mensaje ha sido enviado.</div>
+            <div class="u-form-send-error u-form-send-message">No se puede enviar su mensaje. Por favor, corrija los errores y vuelva a intentarlo.</div> *@
+        </form>
+    </div>
+    <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+        <div class="u-layout">
+            <div class="u-layout-row">
+                @* <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+                    <div class="u-container-layout u-valign-bottom u-container-layout-1">
+                        <h5 class="u-text u-text-default u-text-3">based in new york </h5>
+                    </div>
+                </div> *@
+@*                 <div class="u-container-align-right u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+                    <div class="u-container-layout u-valign-bottom u-container-layout-2">
+                        <h5 class="u-align-right u-text u-text-default u-text-4">
+                            digital design + developer<br>
+                        </h5>
+                    </div>
+                </div>
+ *@            </div>
+        </div>
+    </div>
+</section>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
